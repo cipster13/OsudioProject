@@ -19,9 +19,7 @@ public class Application {
         l.add(DayOfWeek.SUNDAY);
         l.add(DayOfWeek.WEDNESDAY);
         businessHourCalculator.setClosed(l);
-        String [] s = new String[1];
-        s[0] = "2010-12-25";
-        businessHourCalculator.setClosed(s);
+        businessHourCalculator.setClosed(new String[]{"2010-12-25"});
 
         System.out.println(businessHourCalculator.calculateDeadline(2*60*60, LocalDate.parse("2010-06-07"), LocalTime.parse("09:10")));
 

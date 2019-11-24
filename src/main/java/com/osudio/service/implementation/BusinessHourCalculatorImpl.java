@@ -110,9 +110,11 @@ public class BusinessHourCalculatorImpl implements BusinessHourCalculator {
     }
 
 
-
-
-
+    /**
+     * This method take a day as input and checks if it is a open dryCleaner day. Otherwise it goes on till it got one
+     * @param day
+     * @return
+     */
     private PojoDate getValidDate(LocalDate day) {
         boolean fountDay = false;
         //Check if the input day is available for the dryCleaner

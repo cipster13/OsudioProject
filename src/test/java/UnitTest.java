@@ -19,15 +19,16 @@ public class UnitTest {
     @Before
     public void init() throws Exception {
         businessHourCalculator = new BusinessHourCalculatorImpl("09:00", "15:00");
+
         businessHourCalculator.setOpeningHours(DayOfWeek.FRIDAY, "10:00", "17:00");
         businessHourCalculator.setOpeningHours("2010-12-24", "8:00", "13:00");
+
         List<DayOfWeek> l = new ArrayList<>();
         l.add(DayOfWeek.SUNDAY);
         l.add(DayOfWeek.WEDNESDAY);
+
         businessHourCalculator.setClosed(l);
-        String [] s = new String[1];
-        s[0] = "2010-12-25";
-        businessHourCalculator.setClosed(s);
+        businessHourCalculator.setClosed(new String[]{"2010-12-25"});
     }
 
     @Test
